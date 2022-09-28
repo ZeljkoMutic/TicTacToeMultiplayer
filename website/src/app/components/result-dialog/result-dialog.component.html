@@ -1,0 +1,15 @@
+
+<div class="container flex jc-center ai-center">
+  <mat-card class="card">
+    <div mat-card-title>
+      Winner is: {{data.winner}}
+    </div>
+    <div mat-card-content class="m-t-m">
+      <div class="flex jc-between">
+        <button mat-raised-button color="primary" (click)="choose('home')">Home</button>
+        <button mat-raised-button color="accent" (click)="rematch()">Rematch</button>
+      </div>
+    </div>
+  </mat-card>
+</div>
+

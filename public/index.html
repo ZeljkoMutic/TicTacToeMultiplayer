@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+
+        /**
+         * Utilities
+         */
+
+        .flex {
+            display: flex;
+        }
+
+        .jc-center {
+            justify-content: center;
+        }
+
+        .jc-start {
+            justify-content: flex-start;
+        }
+
+        .jc-end {
+            justify-content: flex-end;
+        }
+
+        .jc-between {
+            justify-content: space-between;
+        }
+
+        .jc-around {
+            justify-content: space-around;
+        }
+
+        .ai-center {
+            align-items: center;
+        }
+
+        .ai-start {
+            align-items: flex-start;
+        }
+
+        .ai-end {
+            align-items: flex-end;
+        }
+
+
+
+
+
+        /**
+         * Style
+         */
+
+         body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+
+         .container {
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+         }
+
+        table{
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        .cell{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flex jc-center ai-center">
+        <table>
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+    
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+    
+            <tr>
+                <td class="cell"></td>
+                <td class="cell"></td>
+                <td class="cell"></td>
+            </tr>
+    
+        </table>
+    </div>
+    <script>
+        console.log(1);
+
+        const cells = Array.from(document.querySelectorAll('.cell'));
+        console.log(cells);
+        for (let i = 0; i < cells.length; i++){
+            const cell = cells[i];
+            cell.addEventListener('click', () => {
+                console.log('click');
+                cell.innerHTML = 'X';
+            })
+        }
+    </script>
+</body>
+
+</html>

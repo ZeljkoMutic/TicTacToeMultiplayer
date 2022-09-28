@@ -1,0 +1,9 @@
+<ng-container *ngIf="state.mode === 'singleplayer'">
+  <app-singeplayer-game>
+  </app-singeplayer-game>
+</ng-container>
+<ng-container *ngIf="state.mode === 'multiplayer'">
+  <app-multiplayer-game>
+  </app-multiplayer-game>
+</ng-container>
+

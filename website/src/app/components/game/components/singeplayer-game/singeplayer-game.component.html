@@ -1,0 +1,9 @@
+<div class="container flex jc-center ai-center">
+  <div class="board">
+    <ng-container *ngFor="let row of board; index as i">
+      <div class="cell" *ngFor="let cell of row; index as j" (click)="openField(i, j)">
+        {{cell}}
+      </div>
+    </ng-container>
+  </div>
+</div>
